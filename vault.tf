@@ -8,4 +8,8 @@ resource "helm_release" "vault" {
     name = "server.ha.enabled"
     value = "true"
   }
+  set {
+    name = "ui.serviceType"
+    value = "LoadBalancer"
+  }
 }
